@@ -17,11 +17,15 @@
 package com.iisky.jsender.sdk.javamail;
 
 import com.iisky.jsender.sdk.IApiCfg;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author iisky1121@foxmail.com
  * @date 2021-09-01
  */
+@Getter
+@Setter
 public class JavaMailCfg implements IApiCfg {
     private String account;
     private String password;
@@ -29,44 +33,5 @@ public class JavaMailCfg implements IApiCfg {
     private String protocol;
     private Integer port;
 
-    public String getAccount() {
-        return account;
-    }
-
-    public void setAccount(String account) {
-        this.account = account;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getHost() {
-        return host;
-    }
-
-    public void setHost(String host) {
-        this.host = host;
-    }
-
-    public String getProtocol() {
-        return protocol;
-    }
-
-    public void setProtocol(String protocol) {
-        this.protocol = protocol;
-    }
-
-    public Integer getPort() {
-        return port;
-    }
-
-    public void setPort(Integer port) {
-        this.port = port;
-    }
-
+    private Boolean starttls;
 }

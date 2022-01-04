@@ -16,15 +16,19 @@
 
 package com.iisky.jsender.sdk.javamail;
 
+import cn.hutool.core.util.BooleanUtil;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.iisky.jsender.utils.Resp;
+import com.sun.mail.util.MailSSLSocketFactory;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.StandardException;
 
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.security.GeneralSecurityException;
 import java.util.Date;
 import java.util.Properties;
 
@@ -42,7 +46,15 @@ public class JavaMailApi {
         if (cfg.getPort() != null) {
             props.setProperty("mail.smtp.port", cfg.getPort().toString());
         }
-        return Session.getDefaultInstance(props);
+        if (BooleanUtil.isTrue(cfg.getStarttls())) {
+            props.setProperty("mail.smtp.starttls.enable", "true");
+        }
+        return Session.getInstance(props, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(cfg.getAccount(), cfg.getPassword());
+            }
+        });
     }
 
     public static Resp sendMsg(JavaMailCfg cfg, String body) {
@@ -78,33 +90,11 @@ public class JavaMailApi {
         return message;
     }
 
+    @Getter
+    @Setter
     static class JavaEmailBean {
         private String recipient;
         private String subject;
         private String content;
-
-        public String getRecipient() {
-            return recipient;
-        }
-
-        public void setRecipient(String recipient) {
-            this.recipient = recipient;
-        }
-
-        public String getSubject() {
-            return subject;
-        }
-
-        public void setSubject(String subject) {
-            this.subject = subject;
-        }
-
-        public String getContent() {
-            return content;
-        }
-
-        public void setContent(String content) {
-            this.content = content;
-        }
     }
 }
