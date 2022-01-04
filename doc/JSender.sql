@@ -32,11 +32,11 @@ CREATE TABLE `api_config` (
 -- ----------------------------
 -- Records of api_config
 -- ----------------------------
-INSERT INTO `jsender`.`api_config` (`id`, `appId`, `cfgName`, `config`, `httpConfig`, `remark`) VALUES ('AliYunCfg-demo', 'demo', 'AliYunCfg', '{\"accessKeyId\":\"\",\"accessSecret\":\"\"}', NULL, NULL);
-INSERT INTO `jsender`.`api_config` (`id`, `appId`, `cfgName`, `config`, `httpConfig`, `remark`) VALUES ('DingTalkCfg-demo', 'demo', 'DingTalkCfg', '{\"appId\":\"\",\"appSecret\":\"\"}', NULL, NULL);
-INSERT INTO `jsender`.`api_config` (`id`, `appId`, `cfgName`, `config`, `httpConfig`, `remark`) VALUES ('JavaMailCfg-demo', 'demo', 'JavaMailCfg', '{\"account\":\"\",\"password\":\"\",\"host\":\"\"}', NULL, NULL);
-INSERT INTO `jsender`.`api_config` (`id`, `appId`, `cfgName`, `config`, `httpConfig`, `remark`) VALUES ('WxMpCfg-demo', 'demo', 'WxMpCfg', '{\"appId\":\"\",\"appSecret\":\"\"}', NULL, NULL);
-INSERT INTO `jsender`.`api_config` (`id`, `appId`, `cfgName`, `config`, `httpConfig`, `remark`) VALUES ('WxQyCfg-demo', 'demo', 'WxQyCfg', '{\"agentId\":\"\",\"corpId\":\"\",\"corpSecret\":\"\"}', NULL, NULL);
+INSERT INTO `api_config` (`id`, `appId`, `cfgName`, `config`, `httpConfig`, `remark`) VALUES ('AliYunCfg-demo', 'demo', 'AliYunCfg', '{\"accessKeyId\":\"\",\"accessSecret\":\"\"}', NULL, NULL);
+INSERT INTO `api_config` (`id`, `appId`, `cfgName`, `config`, `httpConfig`, `remark`) VALUES ('DingTalkCfg-demo', 'demo', 'DingTalkCfg', '{\"appId\":\"\",\"appSecret\":\"\"}', NULL, NULL);
+INSERT INTO `api_config` (`id`, `appId`, `cfgName`, `config`, `httpConfig`, `remark`) VALUES ('JavaMailCfg-demo', 'demo', 'JavaMailCfg', '{\"account\":\"\",\"password\":\"\",\"host\":\"\"}', NULL, NULL);
+INSERT INTO `api_config` (`id`, `appId`, `cfgName`, `config`, `httpConfig`, `remark`) VALUES ('WxMpCfg-demo', 'demo', 'WxMpCfg', '{\"appId\":\"\",\"appSecret\":\"\"}', NULL, NULL);
+INSERT INTO `api_config` (`id`, `appId`, `cfgName`, `config`, `httpConfig`, `remark`) VALUES ('WxQyCfg-demo', 'demo', 'WxQyCfg', '{\"agentId\":\"\",\"corpId\":\"\",\"corpSecret\":\"\"}', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for api_template
