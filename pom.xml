@@ -14,47 +14,66 @@
         https://gitee.com/iisky1121/JSender
     </description>
 
+    <properties>
+        <netty-all.version>4.1.72.Final</netty-all.version>
+        <hutool-all.version>5.7.18</hutool-all.version>
+        <fastjson.version>1.2.79</fastjson.version>
+        <javax.mail.version>1.6.2</javax.mail.version>
+        <jedis.version>2.9.0</jedis.version>
+        <logback-classic.version>1.2.3</logback-classic.version>
+        <mysql-connector-java.version>8.0.27</mysql-connector-java.version>
+        <HikariCP.version>5.0.0</HikariCP.version>
+        <lombok.version>1.18.22</lombok.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.1.66.Final</version>
+            <version>${netty-all.version}</version>
         </dependency>
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.7.11</version>
+            <version>${hutool-all.version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.78</version>
+            <version>${fastjson.version}</version>
         </dependency>
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
-            <version>1.6.2</version>
+            <version>${javax.mail.version}</version>
         </dependency>
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-            <version>2.9.0</version>
+            <version>${jedis.version}</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
+            <version>${logback-classic.version}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.26</version>
+            <version>${mysql-connector-java.version}</version>
         </dependency>
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
-            <version>4.0.3</version>
+            <version>${HikariCP.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
